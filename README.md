@@ -61,7 +61,7 @@ The iOS Chronometer apps do not use these libraries; they contain similar code t
 
 ## Installing
 
-All library and app directories must live at the same level (they refer to each other using relative `../` paths). So, for example, to download all of the necessary components for Emerald Timestamp:
+All library and app directories must live at the same level (they refer to each other using relative `../` paths). So, for example, to use [ssh](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) to download all of the necessary components for Emerald Timestamp:
 
 ```shell
 mkdir emeraldsequoia
