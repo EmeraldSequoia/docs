@@ -43,6 +43,9 @@ Emerald Geneva (the app which has only the single watch `Geneva`).
 ### EO
 Emerald Observatory (the app or the project).
 
+### ES
+Emerald Sequoia, the LLC (California limited liability partnership between Bill and Steve) that originally published the apps.
+
 ### ET
 Emerald Time (the app for the iPhone and the iPad).
 
