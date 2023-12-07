@@ -50,7 +50,7 @@ Emerald Time (the app for the iPhone and the iPad).
 Emerald Timestamp (the app for the iPhone and the iPad).
 
 ### H
-Depending on context, either [Harrison](#harrison) or [Henry](#henry). Typically `h` by itself refers to Henry, and when part of an abbreviation (e.g., `CwH`), the `h` stands for Henry.
+Depending on context, either [Harrison](#harrison) or [Henry](#henry). Typically `h` by itself refers to Harrison, and when part of an abbreviation (e.g., `CwH`), the `h` stands for Henry.
 
 ### Harrison
 The original code name for Emerald Chronometer, named after the famous clockmaker [John Harrison](https://en.wikipedia.org/wiki/John_Harrison).
