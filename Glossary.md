@@ -59,10 +59,10 @@ Depending on context, either [Harrison](#harrison) or [Henry](#henry). Typically
 The original code name for Emerald Chronometer, named after the famous clockmaker [John Harrison](https://en.wikipedia.org/wiki/John_Harrison).
 
 ### Henry
-A code name for the part of the Emerald Chronometer build process that constructs [atlases](#atlas) and [archives](#archive) from watch-definition XML files. Henry is run inside an iOS simulator on a desktop Mac. The name comes from [Henry Sully](https://en.wikipedia.org/wiki/Henry_Sully), who made a precursor to [Harrison](harrison)'s famous clocks.
+A code name for the part of the Emerald Chronometer build process that constructs [atlases](#atlas) and [archives](#archive) from watch-definition XML files. Henry is run inside an iOS simulator on a desktop Mac. The name comes from [Henry Sully](https://en.wikipedia.org/wiki/Henry_Sully), who made a precursor to [Harrison](#harrison)'s famous clocks.
 
 ### Parser
-A subsystem within Emerald Chronometer that parses C-style expressions into [bytecode](https://en.wikipedia.org/wiki/Bytecode). The watch definition files that feed into [Henry](#henry) allow these expressions in various places, such as angle of a hand as a function of the current time. The bytecode then forms part of the [archive.dat](archive.dat) files which are read at startup by Emerald Chronometer (and [ECHD](#echd)).
+A subsystem within Emerald Chronometer that parses C-style expressions into [bytecode](https://en.wikipedia.org/wiki/Bytecode). The watch definition files that feed into [Henry](#henry) allow these expressions in various places, such as angle of a hand as a function of the current time. The bytecode then forms part of the [archive.dat](#archive.dat) files which are read at startup by Emerald Chronometer (and [ECHD](#echd)).
 
 ### part
 A single element of a watch face in Emerald Chronometer. There are two representations of parts in EC:
