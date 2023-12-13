@@ -6,8 +6,8 @@ Typically used to refer to the collection of [atlases](#atlas) and [archive.dat]
 ### archive.dat
 A binary data file for a particular watch in Emerald Chronometer, containing descriptions for each [part](#part) on the watch face. It describes, for each part:
 *   which rectangular area in the [atlas](#atlas) corresponds to that part
-*   the position on the display at which the part should be centered (possibly as a function of time, expressed as a C expression)
-*   the rotation of the part, typically as a function of time, expressed as a C expression
+*   the position on the display at which the part should be centered (possibly as a function of time, expressed as a C expression (see [Parser](#parser) below).
+*   the rotation of the part, typically as a function of time, expressed as a C expression (see [Parser](#parser) below).
 *   other attributes, such as how often the part needs to be updated
 
 ### atlas
@@ -29,7 +29,7 @@ An abbreviation for [ChronometerWithHenry](#chronometerwithhenry).
 An abbreviation for [ChronometerWithHenryHD](#chronometerwithhenryhd).
 
 ### display list
-A construct in Emerald Chronometer based on OpenGL which contains instructions for how to draw all of the parts on a watch face. Derived from the [archive.dat](archivedat) file at app startup, a display list contains a list of coordinates that can be passed to OpenGL as one item, so that all of the parts on a watch can be drawn with a single OpenGL call.
+A construct in Emerald Chronometer based on OpenGL which contains instructions for how to draw all of the parts on a watch face. Derived from the [archive.dat](#archivedat) file at app startup, a display list contains a list of coordinates that can be passed to OpenGL as one item, so that all of the parts on a watch can be drawn with a single OpenGL call.
 
 ### EC
 Emerald Chronometer. It can either refer to the specific iPhone-only app, or to the project which contains that app, [ECHD](#echd), and [Geneva](#eg).
@@ -62,7 +62,7 @@ The original code name for Emerald Chronometer, named after the famous clockmake
 A code name for the part of the Emerald Chronometer build process that constructs [atlases](#atlas) and [archives](#archive) from watch-definition XML files. Henry is run inside an iOS simulator on a desktop Mac. The name comes from [Henry Sully](https://en.wikipedia.org/wiki/Henry_Sully), who made a precursor to [Harrison](#harrison)'s famous clocks.
 
 ### Parser
-A subsystem within Emerald Chronometer that parses C-style expressions into [bytecode](https://en.wikipedia.org/wiki/Bytecode). The watch definition files that feed into [Henry](#henry) allow these expressions in various places, such as angle of a hand as a function of the current time. The bytecode then forms part of the [archive.dat](#archive.dat) files which are read at startup by Emerald Chronometer (and [ECHD](#echd)).
+A subsystem within Emerald Chronometer that parses C-style expressions into [bytecode](https://en.wikipedia.org/wiki/Bytecode). The watch definition files that feed into [Henry](#henry) allow these expressions in various places, such as angle of a hand as a function of the current time. The bytecode then forms part of the [archive.dat](#archivedat) files which are read at startup by Emerald Chronometer (and [ECHD](#echd)).
 
 ### part
 A single element of a watch face in Emerald Chronometer. There are two representations of parts in EC:
