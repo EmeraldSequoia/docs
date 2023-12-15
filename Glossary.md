@@ -61,6 +61,9 @@ The original code name for Emerald Chronometer, named after the famous clockmake
 ### Henry
 A code name for the part of the Emerald Chronometer build process that constructs [atlases](#atlas) and [archives](#archive) from watch-definition XML files. Henry is run inside an iOS simulator on a desktop Mac. The name comes from [Henry Sully](https://en.wikipedia.org/wiki/Henry_Sully), who made a precursor to [Harrison](#harrison)'s famous clocks.
 
+### lex
+[Lex](https://en.wikipedia.org/wiki/Lex_(software)) and [Yacc](https://en.wikipedia.org/wiki/Yacc) allow you to generate a parser with text definition files. See the linked Wikipedia articles for more information. They allow using arbitrary C-like expressions for position, angle, etc. in the definitions of watch parts that [Henry](#henry) uses as input.
+
 ### Parser
 A subsystem within Emerald Chronometer that parses C-style expressions into [bytecode](https://en.wikipedia.org/wiki/Bytecode). The watch definition files that feed into [Henry](#henry) allow these expressions in various places, such as angle of a hand as a function of the current time. The bytecode then forms part of the [archive.dat](#archivedat) files which are read at startup by Emerald Chronometer (and [ECHD](#echd)).
 
@@ -68,3 +71,6 @@ A subsystem within Emerald Chronometer that parses C-style expressions into [byt
 A single element of a watch face in Emerald Chronometer. There are two representations of parts in EC:
 1. In [Henry](#henry), a part is constructed as one or more NSView objects. These parts and part classes often have names starting with `Q`, referring to the [Quartz](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_overview/dq_overview.html) drawing framework.
 2. In the [EC](#ec) apps that are actually run by customers, all parts are represented the same way, so that uniform [display lists](display-list) can be constructed containing all of the parts for a watch face. Each such part contains a single rectangle (rendered by OpenGL as two abutting triangles) and binary representations of the C expressions for its position and angle on the display.
+
+### yacc
+[Lex](https://en.wikipedia.org/wiki/Lex_(software)) and [Yacc](https://en.wikipedia.org/wiki/Yacc) allow you to generate a parser with text definition files. See the linked Wikipedia articles for more information. They allow using arbitrary C-like expressions for position, angle, etc. in the definitions of watch parts that [Henry](#henry) uses as input.
