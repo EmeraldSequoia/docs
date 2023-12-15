@@ -79,4 +79,4 @@ Usually capitalized or abbreviated, this refers to the byte-code reader that exi
 Occasionally references are made to "the XML files". These are watch definition files, found in the `Watches/` directory, that [Henry](#henry) uses to define watches for EC.
 
 ### yacc
-[Lex](https://en.wikipedia.org/wiki/Lex_(software)) and [Yacc](https://en.wikipedia.org/wiki/Yacc) allow you to generate a parser with text definition files. See the linked Wikipedia articles for more information. They allow using arbitrary C-like expressions for position, angle, etc. in the definitions of watch parts that [Henry](#henry) uses as input.
+[Lex](https://en.wikipedia.org/wiki/Lex_(software)) and [Yacc](https://en.wikipedia.org/wiki/Yacc) allow you to generate a parser with text definition files. See the linked Wikipedia articles for more information. They allow using arbitrary C-like expressions for position, angle, etc. in the [XML](#xmlfiles) definitions of watch parts that [Henry](#henry) uses as input.
