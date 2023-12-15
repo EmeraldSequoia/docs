@@ -59,7 +59,7 @@ Depending on context, either [Harrison](#harrison) or [Henry](#henry). Typically
 The original code name for Emerald Chronometer, named after the famous clockmaker [John Harrison](https://en.wikipedia.org/wiki/John_Harrison).
 
 ### Henry
-A code name for the part of the Emerald Chronometer build process that constructs [atlases](#atlas) and [archives](#archive) from watch-definition XML files. Henry is run inside an iOS simulator on a desktop Mac. The name comes from [Henry Sully](https://en.wikipedia.org/wiki/Henry_Sully), who made a precursor to [Harrison](#harrison)'s famous clocks.
+A code name for the part of the Emerald Chronometer build process that constructs [atlases](#atlas) and [archives](#archive) from watch-definition XML files. Henry is run inside an iOS simulator on a desktop Mac. The name comes from [Henry Sully](https://en.wikipedia.org/wiki/Henry_Sully), who made a precursor to [Harrison](#harrison)'s famous clocks. Instructions for using Henry can be found [here](https://github.com/EmeraldSequoia/Chronometer/blob/main/specs/henry.md).
 
 ### lex
 [Lex](https://en.wikipedia.org/wiki/Lex_(software)) and [Yacc](https://en.wikipedia.org/wiki/Yacc) allow you to generate a parser with text definition files. See the linked Wikipedia articles for more information. They allow using arbitrary C-like expressions for position, angle, etc. in the definitions of watch parts that [Henry](#henry) uses as input.
