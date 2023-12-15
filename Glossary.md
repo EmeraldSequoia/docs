@@ -72,5 +72,11 @@ A single element of a watch face in Emerald Chronometer. There are two represent
 1. In [Henry](#henry), a part is constructed as one or more NSView objects. These parts and part classes often have names starting with `Q`, referring to the [Quartz](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_overview/dq_overview.html) drawing framework.
 2. In the [EC](#ec) apps that are actually run by customers, all parts are represented the same way, so that uniform [display lists](display-list) can be constructed containing all of the parts for a watch face. Each such part contains a single rectangle (rendered by OpenGL as two abutting triangles) and binary representations of the C expressions for its position and angle on the display.
 
+### Virtual Machine (VM)
+Usually capitalized or abbreviated, this refers to the byte-code reader that exists inside EC that evaluates expressions provided in the [XML](#xmlfiles) for Henry. Each watch has a separate virtual machine, so that the definition of a watch is hermetic and cannot be affected by the definition of any other watch.
+
+### XML files
+Occasionally references are made to "the XML files". These are watch definition files, found in the `Watches/` directory, that [Henry](#henry) uses to define watches for EC.
+
 ### yacc
 [Lex](https://en.wikipedia.org/wiki/Lex_(software)) and [Yacc](https://en.wikipedia.org/wiki/Yacc) allow you to generate a parser with text definition files. See the linked Wikipedia articles for more information. They allow using arbitrary C-like expressions for position, angle, etc. in the definitions of watch parts that [Henry](#henry) uses as input.
