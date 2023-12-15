@@ -65,7 +65,7 @@ A code name for the part of the Emerald Chronometer build process that construct
 [Lex](https://en.wikipedia.org/wiki/Lex_(software)) and [Yacc](https://en.wikipedia.org/wiki/Yacc) allow you to generate a parser with text definition files. See the linked Wikipedia articles for more information. They allow using arbitrary C-like expressions for position, angle, etc. in the definitions of watch parts that [Henry](#henry) uses as input.
 
 ### Parser
-A subsystem within Emerald Chronometer that parses C-style expressions into [bytecode](https://en.wikipedia.org/wiki/Bytecode). The watch definition files that feed into [Henry](#henry) allow these expressions in various places, such as angle of a hand as a function of the current time. The bytecode then forms part of the [archive.dat](#archivedat) files which are read at startup by Emerald Chronometer (and [ECHD](#echd)).
+A subsystem within Emerald Chronometer that parses C-style expressions into [bytecode](https://en.wikipedia.org/wiki/Bytecode). The watch definition files that feed into [Henry](#henry) allow these expressions in various places, such as angle of a hand as a function of the current time. The bytecode then forms part of the [archive.dat](#archivedat) files which are read at startup by Emerald Chronometer (and [ECHD](#echd)). The syntax allowed by the parser is described [here](https://github.com/EmeraldSequoia/Chronometer/blob/main/Parser/ExpressionSyntax.md).
 
 ### part
 A single element of a watch face in Emerald Chronometer. There are two representations of parts in EC:
