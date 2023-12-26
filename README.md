@@ -2,7 +2,7 @@
 
 ## Overview
 
-This GitHub area contains apps and libraries used in the development of apps originally authored by Emerald Sequoia LLC.
+This GitHub area contains apps and libraries used in the development of iOS apps originally authored by Emerald Sequoia LLC.
 
 ## Apps, Libraries, and Tools
 
@@ -14,7 +14,8 @@ The apps are:
 
     *   The iPhone app "Chronometer" (Objective-C++)
     *   The iPad app "Chronomter for iPad" (Objective-C++)
-    *   The WearOS app "Chronometer" and its subset apps (Java and C++ via JNI)
+    *   (Note: The WearOS app "Emerald Chronometer" and its subset apps, using Java and C++ via JNI, are
+        not included here).
 
 The libraries are:
 
@@ -26,7 +27,7 @@ The libraries are:
 The tools are:
 *   `buildscripts`: A collection of scripts used as part of the app or library build process.
 
-Not all apps use the libraries. For the iOS apps, the dependency tree looks like this:
+Not all apps use the libraries. For Emerald Chronometer and Emerald Observatory, the dependency tree looks like this:
 
 ```mermaid
 flowchart
@@ -57,7 +58,7 @@ flowchart
     Observatory:::app-->esutil
 ```
 
-The iOS Chronometer apps do not use these libraries; they contain similar code that predated the creation of the libraries. The WearOS (Android) Chronometer apps are documented in more detail in that app's directory.
+The iOS Chronometer apps do not use these libraries; they contain similar code that predated the creation of the libraries.
 
 ## Installing
 
