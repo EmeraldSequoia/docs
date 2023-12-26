@@ -1,5 +1,9 @@
 The Emerald Sequoia code contains a few code words and abbreviations that may not be immediately obvious, in filenames, code identifiers, comments, and overall documentation. Here's a partial list:
 
+### Android
+
+See [WearOS](#wearos).
+
 ### archive
 Typically used to refer to the collection of [atlases](#atlas) and [archive.dat](#archivedat) files for a particular watch face in Emerald Chronometer.
 
@@ -68,12 +72,20 @@ A code name for the part of the Emerald Chronometer build process that construct
 A subsystem within Emerald Chronometer, defined in [the Parser subdirectory](https://github.com/EmeraldSequoia/Chronometer/tree/main/Parser), that parses C-style expressions into [bytecode](https://en.wikipedia.org/wiki/Bytecode). The watch definition files that feed into [Henry](#henry) allow these expressions in various places, such as angle of a hand as a function of the current time. The bytecode then forms part of the [archive.dat](#archivedat) files which are read at startup by Emerald Chronometer (and [ECHD](#echd)). The syntax allowed by the parser is described [here](https://github.com/EmeraldSequoia/Chronometer/blob/main/Parser/ExpressionSyntax.md). The bytecode interpreter is commonly referred to within EC documentation as [the VM](https://github.com/EmeraldSequoia/docs/blob/main/Glossary.md#virtual-machine-vm).
 
 ### part
-A single element of a watch face in Emerald Chronometer. There are two representations of parts in EC:
-1. In [Henry](#henry), a part is constructed as one or more NSView objects. These parts and part classes often have names starting with `Q`, referring to the [Quartz](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_overview/dq_overview.html) drawing framework.
-2. In the [EC](#ec) apps that are actually run by customers, all parts are represented the same way, so that uniform [display lists](display-list) can be constructed containing all of the parts for a watch face. Each such part contains a single rectangle (rendered by OpenGL as two abutting triangles) and binary representations of the C expressions for its position and angle on the display.
+A single element of a watch face in Emerald Chronometer. There are three representations of parts in EC:
+1. A part is defined in one of the [XML files](#xml-files) that constitute the definition of a watch.
+2. In [Henry](#henry), a part is constructed as one or more NSView objects. These parts and part classes often have names starting with `Q`, referring to the [Quartz](https://developer.apple.com/library/archive/documentation/GraphicsImaging/Conceptual/drawingwithquartz2d/dq_overview/dq_overview.html) drawing framework.
+3. In the [EC](#ec) apps that are actually run by customers, all parts are represented the same way, so that uniform [display lists](display-list) can be constructed containing all of the parts for a watch face. Each such part contains a single rectangle (rendered by OpenGL as two abutting triangles) and binary representations of the C expressions for its position and angle on the display.
+
+Note that a part element in an XML definition may be implemented with many "OpenGL parts" (#3 above) at runtime. Examples include:
+* For one of the segmented moon-phase displays, the XMl specifies a single "terminator" part, and this gets broken down into individual "leaves" that each rotate independently at runtime.
+* Date "wheels" that rotate behind windows are logically a single part, but are broken up into their individual digits (or month or day names) to save space in the [atlases](#atlas) (the area taken up by the wheel contains a lot of empty unused area, and this empty area is unneeded if each digit is moved separately).
 
 ### Virtual Machine (VM)
 Usually capitalized or abbreviated, this refers to the byte-code reader that exists inside EC that evaluates expressions provided in the [XML](#xml-files) for Henry. Each watch has a separate virtual machine, so that the definition of a watch is hermetic and cannot be affected by the definition of any other watch.
+
+### WearOS
+WearOS is Google's name for the OS running on their wearable devices such as watches, based heavily on the Android OS that Google develops for phones. Emerald Sequoia LLC had several WearOS apps based partially on the code in this GitHub project, which were written in Java and used the OpenGL watch face interface that was available at the time, but the code specific to WearOS is not included here.
 
 ### XML files
 Occasionally references are made to "the XML files". These are watch definition files, found in the `Watches/` directory, that [Henry](#henry) uses to define watches for EC.
