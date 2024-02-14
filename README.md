@@ -27,7 +27,7 @@ The libraries are:
 The tools are:
 *   `buildscripts`: A collection of scripts used as part of the app or library build process.
 
-Not all apps use the libraries. For Emerald Chronometer and Emerald Observatory, the dependency tree looks like this:
+Not all apps use the libraries. For Emerald Timestamp and Emerald Observatory, the dependency tree looks like this:
 
 ```mermaid
 flowchart
